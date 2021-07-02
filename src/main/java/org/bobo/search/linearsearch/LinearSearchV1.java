@@ -11,7 +11,8 @@ package org.bobo.search.linearsearch;
  */
 public class LinearSearchV1 {
     // 阻止外部创建对象
-    private LinearSearchV1() {}
+    private LinearSearchV1() {
+    }
 
     public static int search(int[] data, int target) {
         for (int i = 0; i < data.length; i++) {
@@ -23,11 +24,12 @@ public class LinearSearchV1 {
 
     /**
      * 内部测试用例
+     *
      * @param args
      */
     public static void main(String[] args) {
-        int[] data = {13,455,34,5,6,45,6457,535,3};
-        search(data,1);
+        int[] data = {13, 455, 34, 5, 6, 45, 6457, 535, 3};
+        search(data, 1);
         search(data, 222);
     }
 }
