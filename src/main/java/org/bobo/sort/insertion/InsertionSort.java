@@ -73,9 +73,7 @@ public class InsertionSort {
             }
             // 移动数组 [target,i-1] -> [target,i]
             // 循环的方向与移动的方向相反 需要反向遍历
-            for (int j = i - 1; j >= target; j--) {
-                arr[j + 1] = arr[j];
-            }
+            if (i - target >= 0) System.arraycopy(arr, target, arr, target + 1, i - target);
             arr[target] = temp;
         }
     }

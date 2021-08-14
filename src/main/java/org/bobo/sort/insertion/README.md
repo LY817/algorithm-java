@@ -1,4 +1,4 @@
-# InsertionSortV1
+# InsertionSort
 
 ## 思路
 
@@ -21,3 +21,33 @@
 ## 循环不变量
 
 根据思路定义循环不变量
+
+保证左边集合有序 
+
+# tips
+
+### 循环操作
+
+1. 倒叙遍历
+2. 运用循环中初始值、继续条件、退出条件来简化代码和提升效率
+
+### 数组操作
+
+数组内部平移拷贝
+
+```java
+// 移动数组 [target,i-1] -> [target,i]
+// 循环的方向与移动的方向相反 需要反向遍历
+for (int j = i - 1; j >= target; j--) {
+  arr[j + 1] = arr[j];
+}
+```
+
+java中提供了数组复制api
+
+```java
+if (i - target >= 0) {
+  System.arraycopy(arr, target, arr, target + 1, i - target);
+}
+```
+

@@ -30,12 +30,4 @@ public class SelectionSortV2 {
         arr[i] = arr[minIndex];
         arr[minIndex] = temp;
     }
-
-    public static void main(String[] args) {
-        Integer[] arr = new Integer[]{1231, 313, 133, 222, 3, 45, 6, 6};
-        sort(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
-    }
 }
