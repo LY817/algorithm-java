@@ -9,8 +9,10 @@ import static org.junit.Assert.*;
  */
 public class LoopQueueTest {
     @Test
-    public void basic() {
-        Queue<Integer> queue = new LoopQueue<>(5);
+    public void basicV1() {
+        // FIXME 当capacity=5时 输出的结果是3-4-6
+        // 本来就要浪费一个
+        Queue<Integer> queue = new LoopQueueV1<>(5);
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(3);
