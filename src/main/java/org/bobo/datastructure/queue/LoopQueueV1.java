@@ -148,8 +148,9 @@ public class LoopQueueV1<E> implements Queue<E> {
      * 维护front/tail只在底层数组的范围内循环
      *
      * 用的是直观思路实现（比较暴力的解法），让front和tail循环起来
-     * 不是最佳的解法
+     * 不是最佳的解法 用一个去余的操作就可以实现
      * 面对更加复杂的问题可能就存在问题
+     *
      *
      * @param index
      * @return
@@ -161,6 +162,7 @@ public class LoopQueueV1<E> implements Queue<E> {
         } else {
             return index + 1;
         }
+//        return (index + 1) % data.length;
     }
 
     @Override
@@ -175,10 +177,7 @@ public class LoopQueueV1<E> implements Queue<E> {
             }
             index = loopNext(index);
         }
-
         res.append("] tail");
         return res.toString();
-
-
     }
 }

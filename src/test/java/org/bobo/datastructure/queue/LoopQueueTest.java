@@ -22,6 +22,22 @@ public class LoopQueueTest {
         queue.dequeue();
         queue.enqueue(6);
         System.out.println(queue);
+    }
+
+    @Test
+    public void basicV2() {
+        // FIXME 当capacity=5时 输出的结果是3-4-6
+        // 本来就要浪费一个
+        Queue<Integer> queue = new LoopQueueV2<>(5);
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        queue.enqueue(5);
+        queue.dequeue();
+        queue.dequeue();
+        queue.enqueue(6);
+        System.out.println(queue);
 
     }
 }
