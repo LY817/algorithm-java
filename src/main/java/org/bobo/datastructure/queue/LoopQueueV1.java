@@ -10,6 +10,8 @@ import org.bobo.datastructure.stack.Stack;
  * 循环队列 避免频繁数据移动带来的消耗
  * 自己实现版本
  *
+ * TODO 优化 使用size变量 可以不浪费底层数组的空间
+ *
  */
 public class LoopQueueV1<E> implements Queue<E> {
 
@@ -32,7 +34,7 @@ public class LoopQueueV1<E> implements Queue<E> {
     private int tail;
 
     /**
-     * 栈的大小
+     * 队列的大小
      */
     private int size;
 
