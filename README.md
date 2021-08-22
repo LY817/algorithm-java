@@ -1,2 +1,3 @@
 # algorithm-java
-java语言算法练习
+jdk学习
+算法练习
