@@ -1,25 +1,25 @@
 // java8
 // classload目录下
-// javac Foo.java 编译
+// javac -g Foo.java 编译
 // javap -p -v Foo 反编译
 
 Classfile /Users/luoyu/code/java/org.ly817/algorithm-java/src/main/java/org/ly817/jvm/classload/Foo.class
-  Last modified 2021-8-22; size 568 bytes
-  MD5 checksum 1d0692912040ddcbc9973c149739ec68
+  Last modified 2021-8-23; size 702 bytes
+  MD5 checksum 76ae289bd5bdf0ad5a65a3afd6ec3358
   Compiled from "Foo.java"
 public class org.ly817.jvm.classload.Foo
   minor version: 0
   major version: 52 // java8
   flags: ACC_PUBLIC, ACC_SUPER
 Constant pool:
-   #1 = Methodref          #8.#24         // java/lang/Object."<init>":()V
-   #2 = Fieldref           #7.#25         // org/ly817/jvm/classload/Foo.tryBlock:I
-   #3 = Fieldref           #7.#26         // org/ly817/jvm/classload/Foo.finallyBlock:I
-   #4 = Class              #27            // java/lang/Exception
-   #5 = Fieldref           #7.#28         // org/ly817/jvm/classload/Foo.catchBlock:I
-   #6 = Fieldref           #7.#29         // org/ly817/jvm/classload/Foo.methodExit:I
-   #7 = Class              #30            // org/ly817/jvm/classload/Foo
-   #8 = Class              #31            // java/lang/Object
+   #1 = Methodref          #8.#29         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #7.#30         // org/ly817/jvm/classload/Foo.tryBlock:I
+   #3 = Fieldref           #7.#31         // org/ly817/jvm/classload/Foo.finallyBlock:I
+   #4 = Class              #32            // java/lang/Exception
+   #5 = Fieldref           #7.#33         // org/ly817/jvm/classload/Foo.catchBlock:I
+   #6 = Fieldref           #7.#34         // org/ly817/jvm/classload/Foo.methodExit:I
+   #7 = Class              #35            // org/ly817/jvm/classload/Foo
+   #8 = Class              #36            // java/lang/Object
    #9 = Utf8               tryBlock
   #10 = Utf8               I
   #11 = Utf8               catchBlock
@@ -29,21 +29,26 @@ Constant pool:
   #15 = Utf8               ()V
   #16 = Utf8               Code
   #17 = Utf8               LineNumberTable
-  #18 = Utf8               test
-  #19 = Utf8               StackMapTable
-  #20 = Class              #27            // java/lang/Exception
-  #21 = Class              #32            // java/lang/Throwable
-  #22 = Utf8               SourceFile
-  #23 = Utf8               Foo.java
-  #24 = NameAndType        #14:#15        // "<init>":()V
-  #25 = NameAndType        #9:#10         // tryBlock:I
-  #26 = NameAndType        #12:#10        // finallyBlock:I
-  #27 = Utf8               java/lang/Exception
-  #28 = NameAndType        #11:#10        // catchBlock:I
-  #29 = NameAndType        #13:#10        // methodExit:I
-  #30 = Utf8               org/ly817/jvm/classload/Foo
-  #31 = Utf8               java/lang/Object
-  #32 = Utf8               java/lang/Throwable
+  #18 = Utf8               LocalVariableTable
+  #19 = Utf8               this
+  #20 = Utf8               Lorg/ly817/jvm/classload/Foo;
+  #21 = Utf8               test
+  #22 = Utf8               e
+  #23 = Utf8               Ljava/lang/Exception;
+  #24 = Utf8               StackMapTable
+  #25 = Class              #32            // java/lang/Exception
+  #26 = Class              #37            // java/lang/Throwable
+  #27 = Utf8               SourceFile
+  #28 = Utf8               Foo.java
+  #29 = NameAndType        #14:#15        // "<init>":()V
+  #30 = NameAndType        #9:#10         // tryBlock:I
+  #31 = NameAndType        #12:#10        // finallyBlock:I
+  #32 = Utf8               java/lang/Exception
+  #33 = NameAndType        #11:#10        // catchBlock:I
+  #34 = NameAndType        #13:#10        // methodExit:I
+  #35 = Utf8               org/ly817/jvm/classload/Foo
+  #36 = Utf8               java/lang/Object
+  #37 = Utf8               java/lang/Throwable
 {
   private int tryBlock;
     descriptor: I
@@ -71,6 +76,9 @@ Constant pool:
          4: return
       LineNumberTable:
         line 10: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lorg/ly817/jvm/classload/Foo;
 
   public void test();
     descriptor: ()V
@@ -119,6 +127,10 @@ Constant pool:
         line 27: 33
         line 28: 35
         line 29: 40
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           14       5     1     e   Ljava/lang/Exception;
+            0      41     0  this   Lorg/ly817/jvm/classload/Foo;
       StackMapTable: number_of_entries = 3
         frame_type = 77 /* same_locals_1_stack_item */
           stack = [ class java/lang/Exception ]
