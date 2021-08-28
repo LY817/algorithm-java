@@ -1,0 +1,105 @@
+Classfile /Users/luoyu/code/java/org.ly817/algorithm-java/src/main/java/org/ly817/jvm/generics/GenericsTest.class
+  Last modified 2021-8-24; size 769 bytes
+  MD5 checksum bd8e99a24ccd1a533f85c9e4ede11515
+  Compiled from "GenericsTest.java"
+public class org.ly817.jvm.generics.GenericsTest
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #10.#28        // java/lang/Object."<init>":()V
+   #2 = Class              #29            // java/util/ArrayList
+   #3 = Methodref          #2.#28         // java/util/ArrayList."<init>":()V
+   #4 = Methodref          #7.#30         // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   #5 = Methodref          #2.#31         // java/util/ArrayList.add:(Ljava/lang/Object;)Z
+   #6 = Methodref          #2.#32         // java/util/ArrayList.get:(I)Ljava/lang/Object;
+   #7 = Class              #33            // java/lang/Integer
+   #8 = Methodref          #7.#34         // java/lang/Integer.intValue:()I
+   #9 = Class              #35            // org/ly817/jvm/generics/GenericsTest
+  #10 = Class              #36            // java/lang/Object
+  #11 = Utf8               <init>
+  #12 = Utf8               ()V
+  #13 = Utf8               Code
+  #14 = Utf8               LineNumberTable
+  #15 = Utf8               LocalVariableTable
+  #16 = Utf8               this
+  #17 = Utf8               Lorg/ly817/jvm/generics/GenericsTest;
+  #18 = Utf8               foo
+  #19 = Utf8               ()I
+  #20 = Utf8               list
+  #21 = Utf8               Ljava/util/ArrayList;
+  #22 = Utf8               result
+  #23 = Utf8               I
+  #24 = Utf8               LocalVariableTypeTable
+  #25 = Utf8               Ljava/util/ArrayList<Ljava/lang/Integer;>;
+  #26 = Utf8               SourceFile
+  #27 = Utf8               GenericsTest.java
+  #28 = NameAndType        #11:#12        // "<init>":()V
+  #29 = Utf8               java/util/ArrayList
+  #30 = NameAndType        #37:#38        // valueOf:(I)Ljava/lang/Integer;
+  #31 = NameAndType        #39:#40        // add:(Ljava/lang/Object;)Z
+  #32 = NameAndType        #41:#42        // get:(I)Ljava/lang/Object;
+  #33 = Utf8               java/lang/Integer
+  #34 = NameAndType        #43:#19        // intValue:()I
+  #35 = Utf8               org/ly817/jvm/generics/GenericsTest
+  #36 = Utf8               java/lang/Object
+  #37 = Utf8               valueOf
+  #38 = Utf8               (I)Ljava/lang/Integer;
+  #39 = Utf8               add
+  #40 = Utf8               (Ljava/lang/Object;)Z
+  #41 = Utf8               get
+  #42 = Utf8               (I)Ljava/lang/Object;
+  #43 = Utf8               intValue
+{
+  public org.ly817.jvm.generics.GenericsTest();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 11: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lorg/ly817/jvm/generics/GenericsTest;
+
+  public int foo();
+    descriptor: ()I
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: new           #2                  // class java/util/ArrayList
+         3: dup
+         4: invokespecial #3                  // Method java/util/ArrayList."<init>":()V
+         7: astore_1
+         8: aload_1
+         9: iconst_0
+        10: invokestatic  #4                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        13: invokevirtual #5                  // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+        16: pop
+        17: aload_1
+        18: iconst_0
+        // 泛型调用
+        19: invokevirtual #6                  // Method java/util/ArrayList.get:(I)Ljava/lang/Object;
+        22: checkcast     #7                  // class java/lang/Integer
+        25: invokevirtual #8                  // Method java/lang/Integer.intValue:()I
+        28: istore_2
+        29: iload_2
+        30: ireturn
+      LineNumberTable:
+        line 13: 0
+        line 14: 8
+        line 15: 17
+        line 16: 29
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      31     0  this   Lorg/ly817/jvm/generics/GenericsTest;
+            8      23     1  list   Ljava/util/ArrayList;
+           29       2     2 result   I
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            8      23     1  list   Ljava/util/ArrayList<Ljava/lang/Integer;>;
+}
+SourceFile: "GenericsTest.java"
