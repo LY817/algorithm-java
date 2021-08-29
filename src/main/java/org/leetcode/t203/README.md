@@ -31,3 +31,7 @@ https://leetcode-cn.com/problems/remove-linked-list-elements/
 ### 删除
 指针的操作 
 ## 循环不变量
+
+# 反思
+1. 思路很关键
+2. testCase
