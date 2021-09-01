@@ -28,6 +28,8 @@ https://leetcode-cn.com/problems/remove-linked-list-elements/
 ### 遍历
 ### 比较
 题干没有给出dummyHead，所以需要
+
+dummyHead的权衡
 ### 删除
 指针的操作 
 ## 循环不变量
