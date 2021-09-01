@@ -22,4 +22,19 @@ public class SolutionTest {
         head = solution.removeElements2(head,7);
         System.out.println(head);
     }
+
+
+    @Test
+    public void removeElements3Test() {
+        ListNode head = new ListNode(new int[]{1,2,6,3,4,5,6});
+        head = solution.removeElements3(head,6 );
+        System.out.println(head);
+    }
+
+    @Test
+    public void removeElements3Test7() {
+        ListNode head = new ListNode(new int[]{7,7,7,7});
+        head = solution.removeElements3(head,7);
+        System.out.println(head);
+    }
 }
