@@ -74,4 +74,28 @@ class Solution {
         current.next = pev;
         return current;
     }
+
+    /**
+     * 迭代思路
+     */
+    public ListNode reverseList1(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        // 分成头节点和后面的子链表
+        // 翻转后的子链表
+        ListNode subHead = reverseList1(head.next);
+        head.next = null;
+        if (subHead != null) {
+            // 把头放到子链表的尾部
+            ListNode tail = subHead;
+            while (tail.next != null) {
+                tail = subHead.next;
+            }
+            tail.next = head;
+        } else {
+            return head;
+        }
+        return subHead;
+    }
 }

@@ -14,9 +14,9 @@ public class SolutionTest {
 
     @Test
     public void removeElements2Test() {
-        ListNode head = new ListNode(new int[]{1, 2, 3});
+        ListNode head = new ListNode(new int[]{1, 2});
         System.out.println(head);
-        head = solution.reverseList2(head);
+        head = solution.reverseList1(head);
         System.out.println(head);
     }
 }
