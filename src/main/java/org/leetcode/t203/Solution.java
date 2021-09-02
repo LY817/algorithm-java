@@ -1,5 +1,7 @@
 package org.leetcode.t203;
 
+import org.leetcode.datastructure.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -115,4 +117,28 @@ class Solution {
         return recursive(head.next,val);
     }
 
+    /**
+     * 递归正确示范 独立思考版
+     * @param head
+     * @param val
+     * @return
+     */
+    public ListNode removeElements3(ListNode head, int val) {
+        // 返回的是删除指定元素后的链表
+        // 拆解原则：head节点 和 head后面的节点
+        // 解决问题
+        // - head这个节点是否需要被删除
+        // - 拼上后面的链表
+        if (head == null) {
+            return null;
+        }
+        while (head.val == val) {
+            head = head.next;
+            if (head == null) {
+                return null;
+            }
+        }
+        head.next = removeElements3(head.next,val);
+        return head;
+    }
 }

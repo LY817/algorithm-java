@@ -1,8 +1,7 @@
 package org.leetcode.t203;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.leetcode.datastructure.ListNode;
 
 /**
  * Created by LuoYu on 2021/8/29.
